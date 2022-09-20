@@ -1,7 +1,7 @@
 <template>
   <div class="has-logo">
     <p @click="goHome" class="system-title">
-        <img style="width:20px" src="../../assets/logo.png" alt=""/>
+        <img  src="../../assets/logo.png" alt=""/>
         <span>cms页面配置系统</span>
     </p>
     <el-scrollbar wrap-class="scroll-wrapper">
@@ -17,7 +17,6 @@
 <script>
 import menuData from './menuData'
 import SidebarItem from '@/components/Sidebar/SidebarItem.vue'
-
 export default {
   name: 'Sidebar',
   components: { SidebarItem },
@@ -40,6 +39,11 @@ export default {
   },
   mounted () {
 
+  },
+  methods: {
+    goHome () {
+
+    }
   }
 
 }
@@ -51,5 +55,14 @@ export default {
     color:#ccc;
     text-align: center;
     font-size: 14px;
+}
+.system-title{
+  padding-top:8px;
+  text-align: center;
+  img,span{vertical-align: middle;}
+  img{width:40px;}
+  color:#fff;
+  font-size: 16px;
+  span{padding-left:10px;}
 }
 </style>

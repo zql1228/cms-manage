@@ -972,7 +972,7 @@
 
 "@bigbighu/mobili-coffee@^0.0.1":
   version "0.0.1"
-  resolved "https://registry.npmmirror.com/@bigbighu/mobili-coffee/-/mobili-coffee-0.0.1.tgz#af0fc17546d98c3d89ef9635b4da45798eaa37df"
+  resolved "https://registry.yarnpkg.com/@bigbighu/mobili-coffee/-/mobili-coffee-0.0.1.tgz#af0fc17546d98c3d89ef9635b4da45798eaa37df"
   integrity sha512-8Bad5UGEbS1MXvwmtfs6jJ/kyBQiwq2HlYzASZLoh3ahV+lqnH7fI7Y+GlhqMCJ58eW1fmqaxHzlbNEfYnLf9A==
   dependencies:
     "@bigbighu/mobili-pizza" "^0.0.1"
@@ -984,7 +984,7 @@
 
 "@bigbighu/mobili-pizza@^0.0.1":
   version "0.0.1"
-  resolved "https://registry.npmmirror.com/@bigbighu/mobili-pizza/-/mobili-pizza-0.0.1.tgz#85bc07eecedfd0af484f321683388b6d351e4142"
+  resolved "https://registry.yarnpkg.com/@bigbighu/mobili-pizza/-/mobili-pizza-0.0.1.tgz#85bc07eecedfd0af484f321683388b6d351e4142"
   integrity sha512-1HBvdTXy/zJOXTWO1q7EUb3LJy9LDRBkWEHYdCge1OeB8lWfFS+KYNe3cnR6REJz913/YucJJd2UTHNlcmlG+w==
   dependencies:
     dayjs "^1.10.4"

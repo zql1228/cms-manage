@@ -7,8 +7,9 @@
 </template>
 
 <script>
-import { Validator } from '@bigbighu/cms-utils'
+import { Validator } from '@bigbighu/cms-utils' // 判断是否是外部链接
 export default {
+  name: 'Link',
   props: {
     to: {
       type: String,
@@ -17,12 +18,13 @@ export default {
   },
   methods: {
     linkProps (url) {
+      // 判断是否是外部链接
       if (Validator.isExternal(url)) {
         return { // 外部链接
           is: 'a',
           href: url,
-          target: '_blank',
-          rel: 'noopener'
+          target: '_blank'
+          // rel: 'noopener'
         }
       }
       return { // 内部链接

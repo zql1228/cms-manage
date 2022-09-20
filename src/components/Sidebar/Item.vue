@@ -2,7 +2,7 @@
 <script>
 export default {
   name: 'MenuItem',
-  functional: true,
+  functional: true, // 表明当前组件是个函数组件
   props: {
     icon: {
       type: String,
@@ -13,6 +13,7 @@ export default {
       default: ''
     }
   },
+  // 渲染函数
   render (h, context) {
     const { icon, title } = context.props
     const vnodes = []
