@@ -55,7 +55,10 @@ export default {
     }
   },
   methods: {
+    // 判断当前菜单是否包含子菜单
+
     hasOneShowChild (children = [], parent) { // 判断是否有子菜单
+      // 判断子菜单是否有内容
       const showingChildren = children.filter(item => {
         if (item.hidden) {
           return false // 隐藏

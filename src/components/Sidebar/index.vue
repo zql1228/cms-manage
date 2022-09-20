@@ -1,10 +1,13 @@
 <template>
   <div class="has-logo">
+    <p @click="goHome" class="system-title">
+        <img style="width:20px" src="../../assets/logo.png" alt=""/>
+        <span>cms页面配置系统</span>
+    </p>
     <el-scrollbar wrap-class="scroll-wrapper">
         <el-menu :default-active="activeMenu" :collapse="true" background-color="#304156"
         text-color="#bfcbd9" :unique-opened="true" active-text-color="#409eff" :collapse-transition="false">
-        <SidebarItem v-for="route in permission_routes" :key="route.path" :item="route" :base-path="routh.path">
-
+        <SidebarItem v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path">
         </SidebarItem>
         </el-menu>
     </el-scrollbar>
@@ -26,6 +29,7 @@ export default {
   computed: {
     activeMenu () {
       const { path, meta } = this.$route
+      // 判断当前是否定义了默认展开的菜单
       if (meta.activeMenu) {
         return meta.activeMenu
       } else {

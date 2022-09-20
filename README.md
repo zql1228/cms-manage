@@ -22,3 +22,5 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+###  cms 管理系统
+yarn add @bigbighu/mobili-pizza @bigbighu/mobili-coffee
