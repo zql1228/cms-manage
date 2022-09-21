@@ -39,10 +39,9 @@ import SidebarItem from './SidebarItem.vue'
 export default {
   name: 'SidebarItem',
   components: { AppLink, Item, SidebarItem },
-  path: {
+  props: {
     item: {
       type: Object,
-      default: {},
       required: true
     },
     isNext: { // 是否有子菜单
@@ -55,12 +54,11 @@ export default {
   },
   data () {
     return {
-      onlyOneChild: '', // 菜单数据
-      isNext: ''
+      onlyOneChild: '' // 菜单数据
     }
   },
   mounted () {
-    console.log(this.item)
+    // console.log(this.item)
   },
   methods: {
     // 判断当前菜单是否包含子菜单

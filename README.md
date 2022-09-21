@@ -24,3 +24,5 @@ yarn lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 ###  cms 管理系统
 yarn add @bigbighu/mobili-pizza @bigbighu/mobili-coffee
+
+yarn add path-to-regexp@3.2.0

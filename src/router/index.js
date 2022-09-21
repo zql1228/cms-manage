@@ -12,18 +12,27 @@ const routes = [
   {
     path: '/',
     name: 'Layout',
+    meta: { title: '首页' },
     component: Layout,
     children: [
       {
-        path: 'home',
-        name: '首页',
+        path: '/home',
+        name: 'home',
         meta: { title: '首页' },
         component: () => import('@/pages/home/index.vue')
+      },
+      {
+        path: '/activity',
+        name: 'activity',
+        meta: { title: '活动管理' },
+        component: () => import('@/pages/activity/index.vue')
       }
     ]
   },
   {
     path: '/404',
+    name: '404',
+    hidden: true,
     component: () => import('@/pages/error-page/404')
   }
 ]

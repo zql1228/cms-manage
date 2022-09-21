@@ -1,12 +1,14 @@
 <template>
   <div class="app-wrapper">
-    <div class="brawer-bg">
+    <div class="drawer-bg">
       <!-- 左侧菜单栏 -->
         <Sidebar class="sidebar-container"></Sidebar>
-
+        <div class="container">
+          <navbar/>
+          <app-main></app-main>
+        </div>
     </div>
-    <navbar></navbar>
-    <app-main></app-main>
+
   </div>
 </template>
 
