@@ -1,15 +1,18 @@
 <template>
-    <div>活动管理</div>
+  <div>活动详情页</div>
 </template>
+
 <script>
 export default {
-  name: '活动管理',
+  name: 'decorate',
   data () {
     return {
 
     }
   }
+
 }
 </script>
-<style lang=''>
+<style>
+
 </style>

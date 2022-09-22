@@ -6,19 +6,19 @@
                     <span class="no-redirect" v-if="item.reditect==='noredirect' || index===levelList.length==1">
                         {{item.meta.title}}
                     </span>
-                    <a v-else href="javascript:void()" @click.prevent="handleClick(item)"></a>
+                    <a v-else href="javascript:void()" @click.prevent="handleClick(item)">   {{item.meta.title}}</a>
                 </el-breadcrumb-item>
             </transition-group>
         </el-breadcrumb>
     </div>
 </template>
 <script>
-// import pathToRegexp from 'path-to-regexp'
+import pathToRegexp from 'path-to-regexp'
 export default {
   name: 'Breadcrumb',
   data () {
     return {
-      levelList: []
+      levelList: []// 面包屑数据
     }
   },
   created () {
@@ -45,7 +45,7 @@ export default {
     },
     // 判度是否是首页
     isDashboard (route) {
-      const name = route && route.name
+      const name = route && route.meta.title
       if (!name) {
         return false
       }
@@ -59,8 +59,10 @@ export default {
       }
       this.$router.push(this.pathComplie(path))
     },
-    pathComplie (path) {
-
+    pathComplie (path) { // 将参数和url进行拼接
+      const { params } = this.$route
+      const toPath = pathToRegexp.compile(path)
+      return toPath(params)
     }
   }
 }

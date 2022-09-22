@@ -3,8 +3,9 @@
     <div class="drawer-bg">
       <!-- 左侧菜单栏 -->
         <Sidebar class="sidebar-container"></Sidebar>
-        <div class="container">
-          <navbar/>
+        <div class="main-container">
+          <div>  <navbar :system-name="systemName"><slot></slot></navbar></div>
+
           <app-main></app-main>
         </div>
     </div>
@@ -15,7 +16,14 @@
 <script>
 import { Sidebar, Navbar, AppMain } from '@/components/index.js'
 export default {
-  components: { Sidebar, Navbar, AppMain }
+  name: 'lauout',
+  components: { Sidebar, Navbar, AppMain },
+  props: {
+    systemName: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
 
@@ -39,7 +47,7 @@ export default {
 
   .drawer-bg {
     background: #000;
-    opacity: 0.3;
+    // opacity: 0.3;
     width: 100%;
     top: 0;
     height: 100%;

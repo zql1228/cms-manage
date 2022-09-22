@@ -25,9 +25,19 @@ const routes = [
         path: '/activity',
         name: 'activity',
         meta: { title: '活动管理' },
-        component: () => import('@/pages/activity/index.vue')
+        children: [
+          {
+            path: '/',
+            component: () => import('@/pages/activity/index.vue')
+          }
+        ]
       }
     ]
+  },
+  {
+    path: '/decorate',
+    name: 'decorate',
+    component: () => import('../pages/decorate/index.vue')
   },
   {
     path: '/404',

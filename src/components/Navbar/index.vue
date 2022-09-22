@@ -6,7 +6,18 @@
             <span class="styletem-name">{{systemName}}</span>
         </div>
         <!-- 面包屑导航 -->
-        <Breadcrumb/>
+        <Breadcrumb id="breadcrumb-container" class="breadcrumb-container"/>
+        <div class="right-menu">
+          <div class="right-menu-item"> <slot></slot></div>
+          <el-dropdown class="avatar-container right-menu-item hover-effect" @visible-change="toggleDropdown">
+            <div class="avatar-wrapper"><p class="user-name">{{username}}</p></div>
+              <i class="el-icon-arrow-down el-icon--right" :class="isDropdownOpen?'open':''"></i>
+            <el-dropdown-menu slot="dropdown">
+
+              <el-dropdown-item> <div @click="logout">退出登录</div></el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+        </div>
     </div>
 </template>
 <script>
@@ -19,13 +30,25 @@ export default {
     return {
       isActive: false,
       widthoutAnimation: false,
-      systemName: 'xxx'
+      systemName: 'xxx',
+      isDropdownOpen: false,
+      username: 'xxx'
     }
   },
   methods: {
     // 点击菜单折叠按钮
     toggleSidebar () {
 
+    },
+    toggleDropdown () { // 展开下拉菜单
+      this.isDropdownOpen = !this.isDropdownOpen
+    },
+    logout () {
+      // 2.清空token
+      localStorage.setItem('token')
+
+      // 3.跳转登录页
+      window.location.href = location.origin + '/cms-mange/login'
     }
   }
 }
