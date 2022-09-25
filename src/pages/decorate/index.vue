@@ -1,10 +1,14 @@
 <template>
-  <div>活动详情页</div>
+  <div>
+    <PageLeft/>
+  </div>
 </template>
 
 <script>
+import PageLeft from './components/PageLeft.vue'
 export default {
   name: 'decorate',
+  components: { PageLeft },
   data () {
     return {
 
